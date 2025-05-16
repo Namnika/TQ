@@ -1,3 +1,5 @@
+/* Problems sets of JavaScript basics */
+
 // Section 1: Variables and Data Types
 //  Exercise 1: Variable Declarations
 
