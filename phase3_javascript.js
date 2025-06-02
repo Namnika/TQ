@@ -61,7 +61,7 @@ console.log(original.d); // 2 doesn't modifies oriignal obj
 
 const spread2 = { ...original }
 spread.user.details.age = 20
-console.log(original.user.details.age);
+console.log(original.user.details.age); //20
 
 
 
