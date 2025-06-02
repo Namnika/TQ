@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+    <link href="script.js" type="text/javascript">
+    <style>
+        form>fieldset {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            width: 80%;
+        }
+
+        input {
+            width: 70%;
+            margin-bottom: 1rem;
+            padding: 10px;
+        }
+
+        textarea {
+            width: 40%;
+        }
+
+        button {
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Section 3: DOM Manipulation</h2>
+
+    <div class="info">this is div element with class `.info`</div>
+    <br>
+    <br>
+    <button id="submitBtn" style="padding: 8px 15px;">Submit</button>
+    <br>
+    <br>
+    <div id="container"></div>
+
+    <br>
+    <br>
+    <div class="message">this is a sample message.</div>
+    <br>
+    <br>
+    <form>
+        <fieldset>
+            <legend>Simple Form</legend>
+            <label for="name">Name: </label><input type="text" value="" placeholder="Enter your name" name="name"
+                id="name">
+            <label for="password">Password: </label> <input type="password" placeholder="Enter your password"
+                name="password" id="password">
+            <label for="phone">Phone No.: </label> <input type="tel" placeholder="Enter your phone" name="phone"
+                id="phone">
+            <label for="designation">Designation: </label> <input type="text" placeholder="Enter your designation"
+                name="designation" id="designation">
+            <label for="comments">Comments: </label><textarea name="comments" placeholder="Enter comments" id="comments"
+                cols="30"></textarea>
+            <button type="submit" id="submit">Submit</button>
+        </fieldset>
+    </form>
+    <br>
+    <br>
+    <div class="allvalues"></div>
+</body>
+<script>
+    // Exercise 8: Select and Log an Element
+    const div = document.querySelector(".info");
+    console.log(div.innerHTML);
+
+    // Exercise 9: Add Event Listener
+    const button = document.querySelector("#submitBtn").addEventListener("click", () => {
+        console.log("Button clicked!")
+    })
+
+    //  Exercise 10: Create and Append Element
+    const text = document.createElement("p"); // create element 'p'
+    text.textContent = "this is sample text"; // add a text content
+    document.querySelector("#container").append(text); // append text node to div container
+
+    //  Exercise 11: Modify Element Content
+    // Change the text content of an element with class .message
+    const msgEle = document.querySelector(".message");
+    msgEle.textContent = "Message is modified!"; // modify message
+
+    // Add a new CSS class to it
+    msgEle.classList.add("new");  // add 'new' class
+
+    // Remove the class after 3 seconds
+    setTimeout(() => {      // using settimeout
+        msgEle.classList.remove("new");
+    }, 3000);
+
+
+    // Exercise 12: Build a Simple Form Handler
+    const name = document.querySelector("#name");
+    const password = document.querySelector("#password");
+    const phone = document.querySelector("#phone");
+    const designation = document.querySelector("#designation");
+    const comments = document.querySelector("#comments");
+    const submit = document.querySelector("#submit");
+
+    let n, pass, ph, desig, comm, sub;
+
+    name.addEventListener("input", (e) => {
+        // console.log(e);
+
+        n = document.createElement("p").textContent = e.target.value;
+        console.log(n)
+    })
+
+    password.addEventListener("input", (e) => {
+
+        pass = document.createElement("p").textContent = e.target.value;
+    })
+
+    phone.addEventListener("input", (e) => {
+        ph = document.createElement("p").textContent = e.target.value;
+    })
+
+
+    designation.addEventListener("input", (e) => {
+        desig = document.createElement("p").textContent = e.target.value;
+    })
+
+    comments.addEventListener("input", (e) => {
+        comm = document.createElement("p").textContent = e.target.value;
+    })
+
+    submit.addEventListener("click", (e) => {
+        console.log(n);
+        e.preventDefault();
+
+        document.querySelector(".allvalues").append(n);
+
+
+        document.querySelector(".allvalues").append(pass);
+
+
+        document.querySelector(".allvalues").append(ph);
+
+
+        document.querySelector(".allvalues").append(desig);
+
+
+        document.querySelector(".allvalues").append(comm);
+    })
+
+
+</script>
+
+</html>

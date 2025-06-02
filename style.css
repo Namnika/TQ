@@ -1,0 +1,70 @@
+*,
+html {
+    box-sizing: border-box;
+}
+
+main {
+    margin: 0 auto;
+    position: relative;
+    background-color: beige;
+}
+
+.paragraph {
+    color: rgb(16, 107, 77);
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: large;
+}
+
+#styled-para {
+    font-family: monospace;
+}
+
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    position: absolute;
+    top: 0;
+    right: 8rem;
+}
+
+.nav-menu>li {
+    list-style: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: black;
+}
+
+hr {
+    width: 60%;
+}
+
+section {
+    background-color: lavenderblush;
+}
+
+form>* {
+    margin-bottom: 10px;
+}
+
+aside {
+    background-color: burlywood;
+}
+
+article {
+    background-color: rgb(176, 243, 243);
+}
+
+.allvalues>* {
+    display: block;
+}
+
+
+footer {
+    margin: 0;
+    padding: 5rem;
+    border-top: 1px solid black;
+    background-color: bisque;
+}

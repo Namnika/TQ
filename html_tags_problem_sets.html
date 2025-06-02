@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tag with attribute charset="UTF-8" tells the browser to use UTF -8 encoding  -->
+    <meta charset="UTF-8">
+    <!-- meta tag with viewport helps to display contents in any device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title to display the name of the web page -->
+    <title>Structure of HTML Page</title>
+    <!-- link tag used to link with css file-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google font link to style content -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
+    <!-- add a favicon -->
+    <link rel="shortcut icon" aria-hidden="true" href="/images/favicon.ico" type="image/x-icon">
+    <!-- add a script file -->
+
+    <link rel="text/javascript" href="script.js">
+
+    <!-- style tag inside head tag: (inline css) -->
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+
+        }
+
+        .hello-world {
+            font-family: "Julius Sans One", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <main role="main">
+        <header>
+            <nav role="navigation" style="display: flex; flex-direction: row; margin-left: 50px;">
+                <ul class="nav-menu">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Solutions</li>
+                    <li>Contact Us</li>
+                </ul>
+            </nav>
+
+            <article aria-live="polite" style="width: 30%;  position: absolute; top: 15rem; right: 0;">
+                <h3>This is an article</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt maxime quod eius ea necessitatibus
+                    et
+                    rerum explicabo sunt alias natus eligendi ad sint, pariatur earum illum, obcaecati numquam incidunt
+                    corporis! <br>
+                    Article created on <time datetime="2025-05-06 10:57">6th May</time> at <time
+                        datetime="2025-05-06 10:57">10:57 AM</time>
+                </p>
+            </article>
+        </header>
+
+
+        <div style="padding-left: 6rem;" tabindex="0">
+            <!-- add a hello world within h2 tag inside body -->
+            <h2 class="hello-world">Hello World</h2>
+
+            <!-- <div> tag helps to create container.
+        nested divs used to embed an element inside elements to easily apply styles and css selectors and reducing the boilerplate code
+    -->
+
+
+            <h3>Nested Tag Example</h3>
+            <div>
+                <h3>This is an example of nested tag.</h3>
+                <p>this is para
+                    <code>div</code> tag helps to create container.
+                    nested divs used to embed an element inside elements to easily apply styles and css selectors
+                    and
+                    reducing the boilerplate code
+                </p>
+
+            </div>
+
+
+
+
+            <!-- add heading <h1> to <h6> -->
+            <section>
+                <h1>This is h1 tag</h1>
+                <h2>This is h2 tag</h2>
+                <h3>This is h3 tag</h3>
+                <h4>This is h4 tag</h4>
+                <h5>This is h5 tag</h5>
+                <h6>This is h6 tag</h6>
+                <p style="width: 60%; color: darkslategrey; word-wrap: break-word; ">Lorem ipsum dolor sit amet
+                    consectetur
+                    adipisicing elit. Incidunt voluptatem, itaque explicabo, qui quas
+                    <strong>bold text using <code>strong</code> tag </strong> laudantium et <em>italic text using
+                        <code>em</code> tag</em> iste libero?
+                    Recusandae ex magni quisquam
+                    dolorum.
+                </p>
+
+                <a href="http://google.com" aria-label="custom-link" target="_blank" rel="noopener noreferrer">This link
+                    opens another page.</a>
+
+                <figure>
+                    <img src="images/landscape-image.jpg" style="width: 20rem; height: 14rem;" alt="landscape-image">
+                    <figcaption>This is an image of landscape</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h3>Example of unordered list</h3>
+                <ul>
+
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JAVASCRIPT</li>
+                    <li>REACT</li>
+                    <li>NODE.JS</li>
+                </ul>
+                <hr>
+                <br>
+
+                <h4>Example of ordered list (Fruits)</h4>
+                <ol>
+
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Mango</li>
+                </ol>
+            </section>
+
+
+            <!-- image includes link that will open another page -->
+            <section>
+                <figure>
+                    <a aria-label="image-link" href="https://youtube.com"><img src="images/landscape-image.jpg"
+                            style="width: 20rem; height: 14rem;" alt="landscape-image2"></a>
+                    <figcaption>This landscape image includes link opens page</figcaption>
+                </figure>
+                <h4>Example of nested lists</h4>
+                <ol type="1">
+                    <li>Python</li>
+                    <li>Html</li>
+                    <li>Css includes
+                        <ol type="a">
+                            <li>Selectors</li>
+                            <li>pesudo classes</li>
+                        </ol>
+
+
+                    </li>
+                    <li>REACT includes
+                        <ol type="a">
+                            <li>Virtual DOM</li>
+                            <li>javascript popular library</li>
+                        </ol>
+
+                    </li>
+                </ol>
+
+                <p>
+                    here <code>br</code> tag is used to break lines within
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatum, <br> expedita
+                    quibusdam,
+                    ratione
+                    totam excepturi, quisquam maiores aliquam <br> incidunt non quasi eligendi eaque. Quas odit quia
+                    magni
+                    placeat ex enim.</p>
+
+                <!-- add a mailto link -->
+                <a href="mailto:userexample@gmail.com">this is a mailto link</a>
+            </section>
+
+
+            <section>
+
+                <a href="tel:+91987654321" aria-label="telephone-link" aria-describedby="telephone-number"> this is a
+                    telephone link</a>
+
+                <p class="paragraph" id="styled-para"><em>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Debitis,
+                        natus quam nesciunt velit laudantium vero
+                        voluptatem consequatur ipsa reprehenderit voluptate neque fuga eligendi maxime quibusdam facere
+                        cumque
+                        expedita enim! Possimus?</em></p>
+
+                <h4>this is a form section</h4>
+                <form action="/submit-form.html" method="post">
+                    <fieldset>
+                        <legend>this is a simple form</legend>
+                        <label for="username">User Name: </label><input required placeholder="username" type="text"
+                            name="username" id="username">
+                        <label for="password">Password: </label><input required placeholder="password" type="password"
+                            name="password" id="password"><br>
+                        <p>select genders: </p>
+                        <input required type="radio" id="female1" name="F" value="Female">
+                        <label for="female1">Female</label><br>
+                        <input required type="radio" id="male1" name="M" value="Male">
+                        <label for="male1">Male</label><br>
+
+
+                        <p> select hobbies: </p>
+                        <input type="checkbox" role="checkbox" name="checkbox" id="h1">
+                        <label for="h1">travelling</label><br>
+                        <input type="checkbox" role="checkbox" name="checkbox" id="h2">
+                        <label for="h2">reading</label><br>
+                        <input type="checkbox" role="checkbox" name="checkbox" id="h3">
+                        <label for="h3">playing</label><br>
+
+                        <label for="email">Email: </label>
+                        <input required placeholder="enter your email" type="email" name="email" id="email"><br>
+                        <label for="comments">Comments: </label>
+                        <textarea name="comments" id="comments" placeholder="Enter any comments" cols="30"
+                            rows="10"></textarea><br>
+
+                        <label for="droplist">Select programming languages: </label>
+                        <select name="droplist" id="droplist">
+                            <option value="Python" selected >Python</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="JAVASCRIPT">JAVASCRIPT</option>
+                            <option value="REACT">REACT</option>
+                        </select>
+
+                    </fieldset>
+
+                    <input type="submit" value="submit">Submit<br>
+                    <input type="reset" value="reset">Reset
+                </form>
+            </section>
+
+            <section>
+                <h3>cutom checkbox for ARIA ROLES</h3>
+
+                <input aria-describedby="travel-checkbox" type="checkbox" name="hobbies" id="travel"
+                    aria-checked="true">
+                <label for="travel">travelling</label><br>
+                <input aria-describedby="read-checkbox" type="checkbox" name="hobbies" id="read">
+                <label for="read">reading</label><br>
+                <input aria-describedby="play-checkbox" type="checkbox" name="hobbies" id="play">
+                <label for="play">playing</label><br>
+            </section>
+
+            <aside>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos distinctio, nam nulla quibusdam quod
+                accusamus qui incidunt dolores <button aria-label="play"></button>
+            </aside>
+
+            <!-- difference between <div> and semantic tags:
+                
+                1. div tag is used to create containers inside sections. 
+                it doesn't provide the information in detailed about the elements used in html page.
+                2. semantic tag such as <section>, <header>, <footer> tags are used to create containers 
+                and provide detailed information about html elements that developers and browsers can understand.
+                
+                -->
+        </div>
+    </main>
+
+
+    <footer>
+        this is a footer copyright reserved.
+        Nagpur, Maharashtra, India
+    </footer>
+
+
+</body>
+
+<!-- add a script tag at the end of the <body> tag because HTML is not rendered before DOM (Document Object Model) is ready,
+     so it makes the scripts to load it fast and work after parsing the all the contents by DOM.
+     
+     if we add script tag within head tag and DOM will render a blank html page until the script tag is downloaded
+      and also users will not wait more than (10 secs) usually.
+     
+    -->
+<script>
+    // add a basic alert
+    window.alert("This is a basic alert");
+</script>
+
+</html>
